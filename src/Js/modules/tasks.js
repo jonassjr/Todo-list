@@ -13,7 +13,6 @@ export const saveTodo = (text) => {
   const existingTodos = JSON.parse(localStorage.getItem("todos")) || [];
 
   const newTodo = {
-    id: Date.now(),
     text,
     completed: false,
   };
@@ -47,7 +46,6 @@ export const saveTodo = (text) => {
   todosWrapper.appendChild(todo);
 
   input.value = "";
-  console.log(todo);
 };
 
 // Remover Todo Local Storage

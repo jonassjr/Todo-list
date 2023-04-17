@@ -3,7 +3,7 @@ const completedTodosWrapper = document.getElementById(
   "completed-todos-wrapper"
 );
 
-const renderTodo = (text, completed, id) => {
+const renderTodo = (text, completed) => {
   // Cria o elemento DOM para o todo
   if (completed === false) {
     const todoElement = document.createElement("article");
@@ -23,7 +23,6 @@ const renderTodo = (text, completed, id) => {
 
     const trashIcon = document.createElement("i");
     trashIcon.classList.add("bx", "bx-trash", "trash");
-    trashIcon.dataset.todoId = id;
     todoElement.appendChild(trashIcon);
 
     // Adiciona o elemento do todo à seção de todos
@@ -46,7 +45,6 @@ const renderTodo = (text, completed, id) => {
 
     const trashIcon = document.createElement("i");
     trashIcon.classList.add("bx", "bx-trash", "trash");
-    trashIcon.dataset.todoId = id;
     todoElement.appendChild(trashIcon);
 
     // Adiciona o elemento do todo à seção de todos
@@ -71,6 +69,6 @@ export const renderTodos = () => {
   const existingTodos = JSON.parse(localStorage.getItem("todos")) || [];
 
   existingTodos.forEach((todo) => {
-    renderTodo(todo.text, todo.completed, todo.id);
+    renderTodo(todo.text, todo.completed);
   });
 };

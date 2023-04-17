@@ -1,3 +1,5 @@
+import '../css/style.css'
+
 /*=============== MENU ===============*/
 
 import { navMenu, navToggle, navClose } from "./modules/menu.js";
@@ -52,7 +54,6 @@ document.addEventListener("click", (ev) => {
 
   if (parentEl && parentEl.querySelectorAll(".task-content")) {
     todoTitle = parentEl.querySelector(".task-content").innerText || "";
-    console.log(todoTitle);
   }
 
   if (targetEl.classList.contains("bx-circle")) {
