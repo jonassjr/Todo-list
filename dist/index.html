@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!--=============== BOX ICONS ===============-->
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+
+    <!--=============== SCRIPT ===============-->
+    <script src="index.min.js" defer></script>
+
+    <title>todo list</title>
+  </head>
+  <body>
+    <!--=============== HEADER ===============-->
+    <header>
+      <nav class="nav container">
+        <div class="nav-toggle" id="nav-toggle">
+          <i class="bx bx-menu"></i>
+        </div>
+
+        <div class="nav-menu">
+          <div class="search-box">
+            <input
+              type="text"
+              class="search-input"
+              id="search-input"
+              placeholder="search task"
+            />
+            <i class="bx bx-search-alt search-icon" id="search-button"></i>
+          </div>
+
+          <div class="nav-close" id="nav-close">
+            <i class="bx bx-x"></i>
+          </div>
+
+          <i class="bx bx-toggle-left change-theme" id="theme-button"></i>
+        </div>
+
+        <button class="add-task-btn" id="add-new">
+          <i class="bx bx-plus"></i>
+        </button>
+      </nav>
+    </header>
+
+    <!--=============== MAIN ===============-->
+    <main class="main">
+      <!--=============== TODO SECTION ===============-->
+
+      <section class="todo-section container" id="todo-section">
+        <h3 class="section-title">TO DO</h3>
+        <div class="todos-wrapper" id="todos-wrapper"></div>
+      </section>
+
+      <!--=============== COMPLETED SECTION ===============-->
+      <section class="completed-section container" id="completed-section">
+        <h3 class="section-title">COMPLETED</h3>
+
+        <div class="todos-wrapper" id="completed-todos-wrapper"></div>
+      </section>
+
+      <!--=============== ADD SECTION ===============-->
+      <section>
+        <div class="add-container" id="add-container">
+          <div class="add-container-content">
+            <form class="form" id="form">
+              <i class="bx bx-x close-modal" id="close-modal"></i>
+
+              <label for="new-task">New Task</label>
+              <input
+                type="text"
+                class="new-task-input"
+                id="task-input"
+                placeholder="Lorem ipsum..."
+              />
+              <button type="submit" class="done-btn">Add</button>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
